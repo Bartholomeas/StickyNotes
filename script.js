@@ -23,7 +23,6 @@ window.addEventListener('DOMContentLoaded', () => {
             placeNote(noteArr[i]);
 
             const element = document.querySelectorAll('.note-title');
-
             if (element[i].innerText == 'Nauka') {
                 element[i].parentElement.parentElement.style.background = '#86b6b7'
             } else if (element[i].innerText == 'Praca') {
@@ -131,8 +130,6 @@ const placeNote = note => {
     `
 
     noteArea.appendChild(newNote)
-    // console.log(newNote);
-
 };
 
 const selectValue = () => {
@@ -155,14 +152,20 @@ const checkColor = note => {
 };
 
 const noteDelete = e => {
-    console.log(e.target.getAttribute('id'));
+    let itemToDelete = e.target.parentElement.parentElement.getAttribute('id');
+    // console.log(e.target.parentElement.parentElement.getAttribute('id'));
+    noteArr.forEach(e => {
+        if (itemToDelete == e.id) {
+            console.log(noteArr.indexOf(e));
+        }
+    })
+    // console.log(noteArr);
 };
+
 
 const deleteNote = id => {
     const noteToDelete = document.getElementById(id);
-    // console.log(noteToDelete.innerHTML);
     noteArea.removeChild(noteToDelete);
-    // localStorage.removeItem(`note${ID}`);
 };
 
 const deleteAllNotes = () => {
