@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #fff4e6;
+  color: #3c2f2f;
+  font-family: 'Poppins', sans-serif;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  background-color: #3c2f2f;
+  color: #fff4e6;
+}
+
+.menu .add-btn {
+  margin-right: 15px;
+}
+
+.icon {
+  background: none;
+  color: #fff4e6;
+  border: 1px solid #fff4e6;
+  padding: 20px;
+  border-radius: 8px;
+  -webkit-transition: color .3s, background-color .3s;
+  transition: color .3s, background-color .3s;
+}
+
+.icon:hover {
+  background-color: #fff4e6;
+  color: #3c2f2f;
+}
+
+.note-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 20px;
+}
+
+.note-area .note {
+  margin: 40px 20px;
+  width: 240px;
+  font-size: 14px;
+  background-color: lightcoral;
+}
+
+.note-area .note .delete-note {
+  background: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.note-area .note-header, .note-area .note-body {
+  padding: 5px 10px;
+}
+
+.note-area .note-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.note-area .note-body {
+  word-wrap: break-word;
+}
+
+.note-panel {
+  background-color: #c05c6e;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 8px;
+  -webkit-box-shadow: 2px 2px 15px #be9b7b;
+          box-shadow: 2px 2px 15px #be9b7b;
+  background-color: #be9b7b;
+}
+
+.note-panel select,
+.note-panel textarea {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #fff4e6;
+  border-radius: 8px;
+  background-color: #c9a787;
+}
+
+.note-panel textarea {
+  resize: vertical;
+}
+
+.note-panel .icon {
+  padding: 10px 20px;
+}
+
+.note-panel .icon .fas,
+.note-panel .icon .far {
+  margin-right: 5px;
+}
+/*# sourceMappingURL=style.css.map */

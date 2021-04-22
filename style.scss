@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #fff4e6;
+    color: #3c2f2f;
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #3c2f2f;
+    color: #fff4e6;
+    // border-bottom: 2px solid #3c2f2f;
+
+    .add-btn {
+        margin-right: 15px;
+    }
+
+}
+
+.icon {
+    background: none;
+    color: #fff4e6;
+    border: 1px solid #fff4e6;
+    padding: 20px;
+    border-radius: 8px;
+    transition: color .3s, background-color .3s;
+
+    &:hover {
+        background-color: #fff4e6;
+
+        color: #3c2f2f;
+    }
+}
+
+
+.note-area {
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    padding: 20px;
+
+    .note {
+        margin: 40px 20px;
+        width: 240px;
+        font-size: 14px;
+        background-color: lightcoral;
+
+        .delete-note {
+            background: none;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        &-header,
+        &-body {
+            padding: 5px 10px;
+        }
+
+        &-header {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        &-body {
+            word-wrap: break-word;
+        }
+    }
+}
+
+
+// PANEL
+.note-panel {
+    background-color: #c05c6e;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 15px #be9b7b;
+    background-color: #be9b7b;
+
+    select,
+    textarea {
+        width: 80%;
+        padding: 10px;
+        border: 1px solid #fff4e6;
+        border-radius: 8px;
+        background-color: #c9a787;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    .icon {
+        padding: 10px 20px;
+
+        .fas,
+        .far {
+            margin-right: 5px;
+        }
+    }
+}
