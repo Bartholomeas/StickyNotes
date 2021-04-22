@@ -13,6 +13,7 @@ const error = document.querySelector('.error');
 let selectedValue;
 let ID = 0;
 const noteArr = [];
+
 window.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('note')) {
         noteArr.push(...JSON.parse(localStorage.getItem('note')));
@@ -154,12 +155,12 @@ const checkColor = note => {
 };
 
 const noteDelete = e => {
-    console.log(e.target);
+    console.log(e.target.getAttribute('id'));
 };
 
 const deleteNote = id => {
     const noteToDelete = document.getElementById(id);
-    console.log(noteToDelete.innerHTML);
+    // console.log(noteToDelete.innerHTML);
     noteArea.removeChild(noteToDelete);
     // localStorage.removeItem(`note${ID}`);
 };
