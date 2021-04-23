@@ -128,8 +128,8 @@ const placeNote = note => {
               <p>${note.text}</p>
             </div>
     `
-
     noteArea.appendChild(newNote)
+    ID++;
 };
 
 const selectValue = () => {
