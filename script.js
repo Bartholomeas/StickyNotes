@@ -18,7 +18,6 @@ window.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('note')) {
         noteArr.push(...JSON.parse(localStorage.getItem('note')));
 
-
         for (let i = 0; i < noteArr.length; i++) {
             placeNote(noteArr[i]);
 
@@ -33,7 +32,6 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
         console.log(noteArr);
-
         // // VVV SPOSOB FOREACH
         // element.forEach(el => {
         //     if (el.innerText == 'Nauka') {
@@ -45,7 +43,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
         //     }
         // })
-
     }
 });
 
@@ -153,13 +150,18 @@ const checkColor = note => {
 
 const noteDelete = e => {
     let itemToDelete = e.target.parentElement.parentElement.getAttribute('id');
-    // console.log(e.target.parentElement.parentElement.getAttribute('id'));
+    console.log(itemToDelete);
+
     noteArr.forEach(e => {
         if (itemToDelete == e.id) {
-            console.log(noteArr.indexOf(e));
+            let item = noteArr.indexOf(e);
+            noteArr.splice(item, 1);
+            localStorage.setItem('note', JSON.stringify(noteArr));
+
+            console.log(noteArr);
+
         }
     })
-    // console.log(noteArr);
 };
 
 
@@ -177,5 +179,4 @@ addBtn.addEventListener('click', openPanel);
 cancelBtn.addEventListener('click', closePanel);
 saveBtn.addEventListener('click', addNote);
 deleteAllBtn.addEventListener('click', deleteAllNotes);
-
 window.addEventListener('click', noteDelete)
